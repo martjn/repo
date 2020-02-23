@@ -13,7 +13,7 @@ def morse(a):
         .replace("&", ".-... ").replace("'", ".----. ").replace("@", ".--.-. ").replace(")", "-.--.- ")\
         .replace("(", "-.--. ").replace(":", "---... ").replace(",", "--.-- ").replace("=", "-...- ")\
         .replace("!", "-.-.-- ").replace("+", ".-.-. ").replace('"', '.-..-. ')\
-        .replace("?", "..--.. ").replace("/", "-..-. ")
+        .replace("?", "..--.. ").replace("/", "-..-. ").replace("J", ".--- ")
     return in_morse
 
 while True:
@@ -24,7 +24,7 @@ while True:
     if ans2 == "y" or ans2 == "yes":
         ans3 = input("Name your file: ")
         f = open(ans3 + ".txt", "w+")
-        f.write(b)
+        f.write("Your original text: " + ans + "\nOriginal text in morse: " + b)
         f.close()
     else:
         break
